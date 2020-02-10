@@ -15,7 +15,7 @@
          <g:form class="text-muted"   controller="customer" action="create">
             <div class="form-group">
                 <label for="title">Title*</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="enter title" required />
+                <input type="text" class="form-control" name="title" id="title" placeholder="enter title" required  autocomplete="off"/>
             </div>
             <div class="form-group">
                 <label for="content">Content*</label>

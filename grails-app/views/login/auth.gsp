@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="layout" content="navigation" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Login</title>
     <style>
     body {
@@ -26,6 +25,9 @@
             <div class="card">
                 <header class="card-header">
                     <h4 class="card-title mt-2">Sign In</h4>
+                    <g:if test='${flash.message}'>
+                        <div style="color:red">${flash.message}</div>
+                    </g:if>
                 </header>
                <article>
                 <form class="card-body" action="${postUrl ?: '/login/authenticate'}" method="POST" autocomplete="off">

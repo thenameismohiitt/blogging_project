@@ -23,12 +23,15 @@
                     <g:link class="nav-link" controller="customer" action="index">Home</g:link>
                 </li>
                 <li class="nav-item">
-                    <g:link class="nav-link" controller="customer" action="create">Create Post</g:link>
+                    <g:link class="nav-link" controller="customer" action="show">View Blog</g:link>
+                </li>
+                <li class="nav-item">
+                    <g:link class="nav-link" controller="customer" action="create">Create Blog</g:link>
                 </li>
                 <li class="nav-item">
                     <sec:ifLoggedIn>
                         <div class="dropdown">
-                            <a class="btn btn-outline-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a style="font-size: 10px;" class="btn btn-outline-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Hello <sec:username />
                             </a>
                             <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">

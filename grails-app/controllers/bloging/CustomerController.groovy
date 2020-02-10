@@ -7,10 +7,20 @@ class CustomerController {
 def springSecurityService
     def index() { }
     def create() {
-        Integer user_id = springSecurityService.currentUserId
-        User users = User.get(user_id)
+        User user_id = springSecurityService.currentUser
         Blog blog = new Blog(params)
-        blog.user = users
+        blog.user = user_id
         blog.save()
+    }
+    def show() {
+        User user = springSecurityService.currentUser as User
+        List results = Blog.createCriteria().list {
+            eq('user', user)
+            projections {
+                property('title')
+                property('content')
+            }
+        }
+        [results:results]
     }
 }

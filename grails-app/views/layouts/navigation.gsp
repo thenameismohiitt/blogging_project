@@ -26,7 +26,7 @@
                     <g:link class="nav-link" controller="welcome" action="register">Sign Up</g:link>
                 </li>
                 <li class="nav-item">
-                    <g:link class="nav-link" controller="welcome" action="blog">Create Post</g:link>
+                    <g:link class="nav-link" controller="welcome" action="blog">Create Blog</g:link>
                 </li>
                 <li class="nav-item">
                     <g:link class="nav-link" controller="login" action="auth">Sign In</g:link>
