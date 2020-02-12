@@ -20,6 +20,7 @@ dependencies:
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.1.16.Final/7a87444230a21ad2201e96bfa2711766a502f0cc/hibernate-core-5.1.16.Final.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.grails.plugins/spring-security-core/3.2.4.BUILD-SNAPSHOT/b3d37311db6cb2d9931cf337dc10f0ffdeedf159/spring-security-core-3.2.4.BUILD-SNAPSHOT.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.grails.plugins/gsp/3.3.2/f1e032675f2233c0b18f4de8e74d830197d11ac5/gsp-3.3.2.jar
+- file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.grails.plugins/mail/2.0.0.RC6/d410eb8cda394dcf894291db5c0e7f94e600c21e/mail-2.0.0.RC6.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.glassfish.web/el-impl/2.1.2-b03/6bab1211b6e6b191fdbf06067bd05d2f75a62ac0/el-impl-2.1.2-b03.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.4.199/7bf08152984ed8859740ae3f97fae6c72771ae45/h2-1.4.199.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/8.5.43/9c0c77ff013df5407c446ac4f08ccc2c623545b1/tomcat-jdbc-8.5.43.jar
@@ -84,6 +85,8 @@ dependencies:
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.6/ce1edb914c94ebc388f086c6827e8bdeec71ac2/commons-lang-2.6.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.3.11/a596ee9c243d7ad6ab82c41f5f77a685f918beb4/grails-plugin-codecs-3.3.11.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-jsp/3.3.2/8dc6e9733613ba951264550dc3961f0e5444fc68/grails-web-jsp-3.3.2.jar
+- file:/home/mohit/.gradle/caches/modules-2/files-2.1/javax.mail/javax.mail-api/1.5.6/51c7a973efb1123558b62e95e31ab03cfa00fa7a/javax.mail-api-1.5.6.jar
+- file:/home/mohit/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.5.6/ab5daef2f881c42c8e280cbe918ec4d7fdfd7efe/javax.mail-1.5.6.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/javax.el/el-api/2.1.2-b03/1ac087d9d1a632d2ff82fa1e8b6610aca025ff2a/el-api-2.1.2-b03.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/8.5.43/5e0d9d997543f74b2d707a1a616d4b680807ca11/tomcat-juli-8.5.43.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/com.bertramlabs.plugins/asset-pipeline-core/2.15.1/7a03810517c8d4c241c686373f620e3ee92af1e7/asset-pipeline-core-2.15.1.jar
@@ -141,6 +144,7 @@ dependencies:
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.grails/grails-codecs/3.3.11/ffa761f05345b1fdcb1357b12b9a8bb7c8231f5a/grails-codecs-3.3.11.jar
+- file:/home/mohit/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.grails/grails-test/3.3.11/996b0dc177226f4ef1f3ca6a20998a023dcbfbca/grails-test-3.3.11.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar
 - file:/home/mohit/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.25.RELEASE/4a64c7820499d41025407e02e58d793c0f5e8403/spring-test-4.3.25.RELEASE.jar

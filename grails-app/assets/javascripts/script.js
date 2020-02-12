@@ -1,26 +1,28 @@
 $(function() {
 
-	$("#username_error_message").hide();
-	$("#password_error_message").hide();
-	$("#retype_password_error_message").hide();
-	$("#lastname_error_message").hide();
-	$("#user_error_message").hide();
+    $("#username_error_message").hide();
+    $("#password_error_message").hide();
+    $("#retype_password_error_message").hide();
+    $("#lastname_error_message").hide();
+    $("#user_error_message").hide();
+    $("#email_error_message").hide();
 
-	var error_username = false;
-	var error_password = false;
-	var error_retype_password = false;
-	var error_lastname = false;
-	var error_user = false;
+    var error_username = false;
+    var error_password = false;
+    var error_retype_password = false;
+    var error_lastname = false;
+    var error_user = false;
+    var error_email = false;
 
-	$("#form_username").focusout(function() {
+    $("#form_username").focusout(function () {
 
-		check_username();
-		
-	});
+        check_username();
 
-	$("#form_password").focusout(function() {
+    });
 
-		check_password();
+    $("#form_password").focusout(function () {
+
+        check_password();
 		
 	});
 
@@ -30,26 +32,31 @@ $(function() {
 		
 	});
 
-	$("#form_lastname").focusout(function() {
+    $("#form_lastname").focusout(function () {
 
-		check_lastname();
+        check_lastname();
 
-	});
-	$("#form_user").focusout(function() {
+    });
+    $("#form_user").focusout(function () {
 
-		check_user();
+        check_user();
 
-	});
+    });
+    $("#form_email").focusout(function () {
 
-	function check_username() {
-	
-		var username_length = $("#form_username").val().length;
-		
-		if(username_length < 3 || username_length > 15) {
-			$("#username_error_message").html("Should be between 3-15 characters").css('color','red');
-			$("#username_error_message").show();
-			error_username = true;
-		} else {
+        check_email();
+
+    });
+
+    function check_username() {
+
+        var username_length = $("#form_username").val().length;
+
+        if (username_length < 3 || username_length > 15) {
+            $("#username_error_message").html("Should be between 3-15 characters").css('color', 'red');
+            $("#username_error_message").show();
+            error_username = true;
+        } else {
 			$("#username_error_message").hide();
 		}
 	
@@ -100,33 +107,48 @@ $(function() {
 
 		var user_length = $("#form_user").val().length;
 
-		if(user_length < 5 || user_length > 20) {
-			$("#user_error_message").html("Should be between 5-20 characters").css('color','red');
-			$("#user_error_message").show();
-			error_user = true;
-		} else {
-			$("#user_error_message").hide();
-		}
+        if (user_length < 5 || user_length > 20) {
+            $("#user_error_message").html("Should be between 5-20 characters").css('color', 'red');
+            $("#user_error_message").show();
+            error_user = true;
+        } else {
+            $("#user_error_message").hide();
+        }
 
-	}
+    }
 
-	$('#submitbtn').click(function(){
-		error_username = false;
-		error_password = false;
-		error_retype_password = false;
-		error_lastname = false;
-		error_user = false;
-		check_username();
-		check_password();
-		check_retype_password();
-		check_lastname();
-		check_user();
-		if(error_username == false && error_password == false && error_retype_password == false && error_lastname == false && error_user==false)
-		{
-			return true;
-		} else {
-			return false;
-		}
+    function check_email() {
 
-	});
+        var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+
+        if (pattern.test($("#form_email").val())) {
+            $("#email_error_message").hide();
+        } else {
+            $("#email_error_message").html("Invalid email address").css('color', 'red');
+            $("#email_error_message").show();
+            error_email = true;
+        }
+
+    }
+
+    $('#submitbtn').click(function () {
+        error_username = false;
+        error_password = false;
+        error_retype_password = false;
+        error_lastname = false;
+        error_user = false;
+        error_email = false;
+        check_username();
+        check_password();
+        check_retype_password();
+        check_lastname();
+        check_user();
+        check_email()
+        if (error_username == false && error_password == false && error_retype_password == false && error_lastname == false && error_user == false && error_email == false) {
+            return true;
+        } else {
+            return false;
+        }
+
+    });
 });

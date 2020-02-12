@@ -1,7 +1,5 @@
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false
-//grails.plugin.springsecurity.password.algorithm = 'SHA-256'
-//grails.plugin.springsecurity.password.hash.iterations = 1
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/customer/index'
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'bloging.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'bloging.UserRole'

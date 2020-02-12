@@ -15,6 +15,7 @@ class User implements Serializable {
     String lastName
     String username
     String password
+    String email
     boolean enabled = true
     boolean accountExpired
     boolean accountLocked
@@ -37,6 +38,7 @@ class User implements Serializable {
         lastName size: 3..15,blank: false,unique: false
         password blank: false, password: true
         username blank: false, unique: true
+        email blank: false, unique: true
     }
 
     static mapping = {

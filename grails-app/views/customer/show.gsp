@@ -12,8 +12,9 @@
 <g:else>
 <div class="text-center">
     <g:each in="${results}" var="result" status="i">
-        <h3 class="text-muted text-uppercase">${result[0]}</h3>
-        <p class="text-capitalize text-justify">${result[1]}</p>
+        <h3 class="text-muted text-uppercase">${result.title}</h3>
+
+        <p class="text-capitalize text-justify">${result.content}</p>
     </g:each>
 </div>
 </g:else>

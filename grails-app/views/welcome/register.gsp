@@ -19,49 +19,72 @@
         }
         </style>
     </head>
+
 <body>
 <br/><br/><br/><br/><br/>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
                 <header class="card-header">
-                    <g:link controller="login" action="auth" class="float-right btn btn-outline-primary mt-1">Log in</g:link>
+                    <g:link controller="login" action="auth"
+                            class="float-right btn btn-outline-primary mt-1">Log in</g:link>
                     <h4 class="card-title mt-2">Sign up</h4>
+                    <g:if test='${flash.message}'>
+                        <div style="color:red">${flash.message}</div>
+                    </g:if>
                 </header>
                 <article class="card-body">
                     <g:form id="registration_form" controller="user" action="register">
                         <div class="form-row">
                             <div class="col form-group">
                                 <label>First name*</label>
-                                <input type="text" name="firstName" id="form_username" class="form-control"/>
+                                <input type="text" name="firstName" id="form_username" class="form-control"
+                                       autocomplete="off"/>
+
                                 <p class="error_form" id="username_error_message"></p>
                             </div> <!-- form-group end.// -->
                             <div class="col form-group">
                                 <label>Last name*</label>
-                                <input type="text" name="lastName" id="form_lastname" class="form-control"/>
-                            <p class="error_form" id="lastname_error_message"></p>
+                                <input type="text" name="lastName" id="form_lastname" class="form-control"
+                                       autocomplete="off"/>
+
+                                <p class="error_form" id="lastname_error_message"></p>
                             </div> <!-- form-group end.// -->
                         </div> <!-- form-row end.// -->
                         <div class="form-group">
                             <label>Username*</label>
-                            <input type="text" name="username" id="form_user" class="form-control"/>
-                        <p class="error_form" id="user_error_message"></p>
+                            <input type="text" name="username" id="form_user" class="form-control" autocomplete="off"/>
+
+                            <p class="error_form" id="user_error_message"></p>
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
+                            <label>Email*</label>
+                            <input type="text" name="email" id="form_email" class="form-control" autocomplete="off"/>
+
+                            <p class="error_form" id="email_error_message"></p>
+                        </div>
+
+                        <div class="form-group">
                             <label>Create password*</label>
-                            <input class="form-control" name="password" id="form_password" type="password" />
-                        <p class="error_form" id="password_error_message"></p>
+                            <input class="form-control" name="password" id="form_password" type="password"
+                                   autocomplete="off"/>
+
+                            <p class="error_form" id="password_error_message"></p>
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
                             <label>Confirm password*</label>
-                            <input class="form-control" id="form_retype_password" type="password" />
-                        <p class="error_form" id="retype_password_error_message"></p>
+                            <input class="form-control" id="form_retype_password" type="password" autocomplete="off"/>
+
+                            <p class="error_form" id="retype_password_error_message"></p>
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                        <input name="submit" type="submit" id="submitbtn" class="btn btn-primary btn-block form-control" value="Register" />
+                            <input name="submit" type="submit" id="submitbtn"
+                                   class="btn btn-primary btn-block form-control" value="Register"/>
                         </div> <!-- form-group// -->
-                        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
+                        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.
+                        </small>
                     </g:form>
                 </article> <!-- card-body end .// -->
                 <div class="border-top card-body text-center">Have an account? <g:link controller="login" action="auth">Log In</g:link></div>
