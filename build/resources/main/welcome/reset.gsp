@@ -1,11 +1,11 @@
-<!Doctype html>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="navigation"/>
-    <title>Reset Password</title>
+    <title>Reset your password</title>
     <style>
     body {
-        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('${resource(dir:"assets/images/", file:"contact-bg.jpg")}');
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('${resource(dir:"assets/images/", file:"about-bg.jpg")}');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -13,8 +13,8 @@
     }
     </style>
     <script type="text/javascript" language="javascript" src="${resource(dir: "assets/javascripts/", file:"script.js")}"></script>
-    <script type="text/javascript" language="javascript" src="${resource(dir: "assets/javascripts/", file: "jquery.js")}"></script>
 </head>
+
 <body>
 <br/><br/><br/><br/><br/>
 
@@ -29,21 +29,14 @@
                     </g:if>
                 </header>
                 <article>
-                    <g:form class="card-body" controller="welcome" action="res" method="POST" autocomplete="off">
+                    <g:form class="card-body" controller="welcome" action="send" method="POST" autocomplete="off">
                         <div class="form-group">
                             <label for="email">Email*</label>
-                            <input type="email" class="form-control" name="email" id="email"/>
+                            <input type="email" class="form-control" name="email" id="email"
+                                   required/>
                         </div><!-- form-group end.// -->
-                        <div class="form-group">
-                            <label for="password">New Password*</label>
-                            <input type="password" class="form-control" name="password" id="password"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="repassword">Confirm Password*</label>
-                            <input type="repassword" class="form-control" name="repassword" id="repassword"/>
-                        </div>
                         <div class="card-body form-group">
-                            <input type="submit" class="btn btn-outline-success" value="Reset"/>
+                            <input type="submit" class="btn btn-success" value="Reset"/>
                         </div>
                     </g:form>
                 </article>

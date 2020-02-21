@@ -35,8 +35,18 @@ class WelcomeController {
         }
     }
 
-    def resetpassword() {
-        
+    def resetpassword() {}
+
+    def res() {
+        User user = User.findByEmail(params.email)
+        if (user) {
+            User.executeUpdate("update User set password = ? where username = ?", [params.password, users.username])
+            flash.message = "Password successfully updated"
+            redirect(action: 'resetpassword')
+        }else {
+            flash.message = "Mail doesnot exists"
+            redirect(action: 'resetpassword')
+        }
     }
 }
 
